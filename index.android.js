@@ -66,8 +66,8 @@ var VenuuVenuesProto = React.createClass({
           style={styles.thumbnail}
         />
         <View style={styles.rightContainer}>
-          <Text style={styles.title}>{venue.title}</Text>
-          <Text style={styles.year}>{venue.city}</Text>
+          <Text style={styles.title} numberOfLines={1}>{venue.title}</Text>
+          <Text style={styles.subtext}>{venue.city}</Text>
         </View>
       </View>
     );
@@ -93,21 +93,25 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    marginBottom: 1,
+    marginTop: 1
   },
   rightContainer: {
     flex: 1
   },
   thumbnail: {
-    width: 53,
-    height: 81,
+    width: 100,
+    height: 66
   },
   title: {
-    fontSize: 20,
-    marginBottom: 8,
-    textAlign: 'center',
+    fontSize: 18,
+    marginBottom: 6,
+    marginLeft: 10,
+    textAlign: 'left'
   },
-  year: {
-    textAlign: 'center',
+  subtext: {
+    marginLeft: 10,
+    textAlign: 'left',
   },
   listView: {
     backgroundColor: '#F5FCFF',
