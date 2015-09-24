@@ -8,7 +8,7 @@ var MOCKED_MOVIES_DATA = [
   {title: 'Title', year: '2015', posters: {thumbnail: 'http://i.imgur.com/UePbdph.jpg'}},
 ];
 
-var REQUEST_URL = 'https://raw.githubusercontent.com/facebook/react-native/master/docs/MoviesExample.json';
+var REQUEST_URL = 'https://venuu.fi/venues.json';
 
 var React = require('react-native');
 var {
@@ -42,7 +42,7 @@ var MyVeryFirstReactNativeAndroidProject = React.createClass({
     return (
       <ListView
         dataSource={this.state.dataSource}
-        renderRow={this.renderMovie}
+        renderRow={this.renderVenue}
         style={styles.listView}
       />
     );
@@ -52,22 +52,22 @@ var MyVeryFirstReactNativeAndroidProject = React.createClass({
     return (
       <View style={styles.container}>
         <Text>
-          Loading movies...
+          Loading venues...
         </Text>
       </View>
     );
   },
 
-  renderMovie: function(movie) {
+  renderVenue: function(venue) {
     return (
       <View style={styles.container}>
         <Image
-          source={{uri: movie.posters.thumbnail}}
+          source={{uri: venue.thumbnail_url}}
           style={styles.thumbnail}
         />
         <View style={styles.rightContainer}>
-          <Text style={styles.title}>{movie.title}</Text>
-          <Text style={styles.year}>{movie.year}</Text>
+          <Text style={styles.title}>{venue.title}</Text>
+          <Text style={styles.year}>{venue.city}</Text>
         </View>
       </View>
     );
@@ -78,7 +78,7 @@ var MyVeryFirstReactNativeAndroidProject = React.createClass({
       .then((response) => response.json())
       .then((responseData) => {
         this.setState({
-          dataSource: this.state.dataSource.cloneWithRows(responseData.movies),
+          dataSource: this.state.dataSource.cloneWithRows(responseData.venues),
           loaded: true,
         });
       })
@@ -110,7 +110,6 @@ var styles = StyleSheet.create({
     textAlign: 'center',
   },
   listView: {
-    paddingTop: 20,
     backgroundColor: '#F5FCFF',
   },
 });
