@@ -1,5 +1,6 @@
 {
-  "name": "MyVeryFirstReactNativeAndroidProject",
+  "name": "VenuuVenuesProto",
+  "description": "A prototype of querying internal venuu.fi venues search API",
   "version": "0.0.1",
   "private": true,
   "scripts": {

@@ -12,7 +12,7 @@ var {
   View,
 } = React;
 
-var MyVeryFirstReactNativeAndroidProject = React.createClass({
+var VenuuVenuesProto = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ var styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('MyVeryFirstReactNativeAndroidProject', () => MyVeryFirstReactNativeAndroidProject);
+AppRegistry.registerComponent('VenuuVenuesProto', () => VenuuVenuesProto);

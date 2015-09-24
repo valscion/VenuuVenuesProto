@@ -20,7 +20,7 @@ var {
   View,
 } = React;
 
-var MyVeryFirstReactNativeAndroidProject = React.createClass({
+var VenuuVenuesProto = React.createClass({
   getInitialState: function() {
     return {
       dataSource: new ListView.DataSource({
@@ -114,4 +114,4 @@ var styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('MyVeryFirstReactNativeAndroidProject', () => MyVeryFirstReactNativeAndroidProject);
+AppRegistry.registerComponent('VenuuVenuesProto', () => VenuuVenuesProto);

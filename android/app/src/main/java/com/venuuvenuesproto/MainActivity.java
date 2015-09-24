@@ -1,4 +1,4 @@
-package com.myveryfirstreactnativeandroidproject;
+package com.venuuvenuesproto;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -30,7 +30,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
 
-        mReactRootView.startReactApplication(mReactInstanceManager, "MyVeryFirstReactNativeAndroidProject", null);
+        mReactRootView.startReactApplication(mReactInstanceManager, "VenuuVenuesProto", null);
 
         setContentView(mReactRootView);
     }
